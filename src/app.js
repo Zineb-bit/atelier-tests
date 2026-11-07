@@ -5,6 +5,7 @@ const app = express();
 
 // Middleware pour lire les requêtes JSON
 app.use(express.json());
+app.use(express.static('public'));
 
 // Route de vérification
 app.get('/health', (req, res) => {
