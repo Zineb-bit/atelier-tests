@@ -13,6 +13,11 @@ FROM node:24-alpine
 
 WORKDIR /app
 
+# Retirer npm de l'image finale
+RUN rm -rf /usr/local/lib/node_modules/npm \
+    /usr/local/bin/npm \
+    /usr/local/bin/npx
+
 ENV NODE_ENV=production
 
 COPY --from=deps --chown=node:node /app/node_modules ./node_modules
