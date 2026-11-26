@@ -2,6 +2,7 @@
 const express = require('express');
 
 const app = express();
+app.disable('x-powered-by');
 
 // Middleware pour lire les requêtes JSON
 app.use(express.json());

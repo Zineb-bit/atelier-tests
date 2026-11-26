@@ -2,3 +2,6 @@ node_modules/
 coverage/
 playwright-report/
 test-results/
+.scannerwork/
+trivy-naif.json
+trivy-durci.json
